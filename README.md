@@ -10,7 +10,7 @@ This project turns one of JavaScript’s most confusing concepts into something 
 
 (Add your deployed link here)
 
-event-loop-visualizer-pied.vercel.app
+[event-loop-visualizer-pied.vercel.app](https://event-loop-visualizer-pied.vercel.app/)
 
 ---
 
