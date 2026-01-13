@@ -1,18 +1,53 @@
-# React + Vite
+# 🔁 JavaScript Event Loop Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive visualization of the JavaScript Event Loop that demonstrates how the Call Stack, Web APIs, Microtask Queue, and Task Queue work together to execute synchronous and asynchronous code.
 
-Currently, two official plugins are available:
+This project turns one of JavaScript’s most confusing concepts into something you can see and understand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+(Add your deployed link here)
 
-Note: This will impact Vite dev & build performances.
+https://your-username.github.io/event-loop-visualizer
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Why this project?
+
+Many developers can write async code but struggle to explain:
+- Why `Promise.then()` runs before `setTimeout(0)`
+- How microtasks differ from macrotasks
+- Why blocking the call stack freezes the UI
+
+This visualizer makes the execution order explicit and intuitive.
+
+---
+
+## ✨ Features
+
+- Call Stack visualization (push / pop)
+- Web APIs simulation (`setTimeout`, async operations)
+- Microtask Queue (Promises)
+- Task / Callback Queue (Timers, events)
+- Event Loop cycle animation
+- Play / Pause / Step execution
+- Realistic execution order matching browser behavior
+
+---
+
+## 🧩 Example Code (Visualized)
+
+```js
+console.log("start");
+
+setTimeout(() => {
+  console.log("timeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("promise");
+});
+
+console.log("end");
